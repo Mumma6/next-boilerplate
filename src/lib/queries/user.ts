@@ -7,6 +7,12 @@ export const findUserForAuth = async (db: Db, userId: string) => {
   return user
 }
 
+export const findUserById = async (db: Db, userId: string) =>
+  await db
+    .collection("users")
+    .findOne({ _id: new ObjectId(userId) }, { projection: { password: 0 } })
+    .then((user) => user || null)
+
 export const findUserWithEmailAndPassword = async (db: Db, email: string, password: string) => {
   const user = await db.collection("users").findOne({ email })
   if (user && (await bcrypt.compare(password, user.password))) {

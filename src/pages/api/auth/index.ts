@@ -13,9 +13,6 @@ handler.use(...auths)
 handler.post(passport.authenticate("local"), (req, res) => {
   const parsedData = UserModelSchema.safeParse(req.user)
 
-  console.log("loggin")
-
-  console.log(parsedData)
   if (!parsedData.success) {
     return handleAPIError(res, "Error login user")
   }

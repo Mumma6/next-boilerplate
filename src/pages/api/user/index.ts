@@ -18,7 +18,6 @@ handler.get(async (req, res) => {
   const parsedData = UserModelSchema.omit({ password: true }).safeParse(req.user)
 
   if (!parsedData.success) {
-    console.log(parsedData.error)
     return handleAPIError(res, "Error getting user")
   }
   !parsedData.data ? handleAPIResponse(res, null, "No user found") : handleAPIResponse(res, parsedData.data, "User found")

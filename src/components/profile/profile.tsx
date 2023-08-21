@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Container } from "@mui/material"
-import About from "./about"
+import About from "./About"
 
 const Profile = () => {
   return (

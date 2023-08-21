@@ -35,7 +35,7 @@ const TECHNOLOGIES_DATA = [
   },
   {
     image: featureImage2,
-    text: "Implement secure authentication using Passport, a flexible and robust authentication middleware for Node.js.",
+    text: "Implement secure authentication and persistence using Passport",
     heading: "Passport",
   },
   {
