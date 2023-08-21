@@ -23,8 +23,6 @@ const EmailVerify = ({ user }: { user: Omit<UserModelSchemaType, "password"> }) 
       toast.error(response.error)
     }
 
-    console.log(response)
-
     setStatus("success")
     toast.info("An email has been sent to your mailbox. Follow the instruction to verify your email.", {
       autoClose: 4000,

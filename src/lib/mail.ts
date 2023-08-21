@@ -6,7 +6,7 @@ const config = {
   port: 587,
   auth: {
     user: "moarte6@gmail.com",
-    pass: process.env.MAIL_PASS, // "xsmtpsib-bcad1da4261b32c81142a27bc3e2142493eb17286941dd88eef5ffcbc445cdc0-2kcx93ZyPDbj16Yg",
+    pass: process.env.MAIL_PASSWORD,
   },
 }
 

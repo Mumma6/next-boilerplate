@@ -132,7 +132,7 @@ const Login = () => {
             </Box>
           </form>
           <NextLink href="/forgot-password" passHref>
-            Forget password
+            Forgot password
           </NextLink>
           <div style={{ display: "flex" }}>
             <Typography mt={1} mr={1} color="textSecondary" variant="body2">

@@ -68,6 +68,11 @@ export const updateUserPasswordByOldPassword = async (db: Db, id: ObjectId, oldP
   return true
 }
 
+export const resetUserPassword = async (db: Db, id: string, newPassword: string) => {
+  const password = await bcrypt.hash(newPassword, 10)
+  await db.collection("users").updateOne({ _id: new ObjectId(id) }, { $set: { password } })
+}
+
 export const deleteUser = async (db: Db, id: ObjectId) => {
   await db.collection("users").deleteOne({ _id: new ObjectId(id) })
 }

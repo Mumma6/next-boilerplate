@@ -1,33 +1,12 @@
-import { FormEvent, useEffect, useState } from "react"
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Checkbox,
-  Container,
-  Divider,
-  Link,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material"
-import NextLink from "next/link"
-import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
+import { Box, Card, CardContent, CardHeader, Divider, TextField } from "@mui/material"
 import { toast } from "react-toastify"
 import { Status } from "@/types/status"
 import { useFormik } from "formik"
 import { toFormikValidate } from "zod-formik-adapter"
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 import SubmitButton from "../common/SubmitButton"
-import {
-  UserModelSchema,
-  UserModelSchemaType,
-  UserRegistrationSchema,
-  UserRegistrationSchemaType,
-} from "@/schema/UserSchema"
+import { UserModelSchema, UserModelSchemaType } from "@/schema/UserSchema"
 import { useUser } from "@/lib/hooks/useUser"
 import { fetcher } from "@/lib/fetcher"
 
@@ -39,8 +18,6 @@ const About = () => {
   const [status, setStatus] = useState<Status>("idle")
 
   const { data, mutate } = useUser()
-
-  const router = useRouter()
 
   const updateAboutUser = async (data: Pick<UserModelSchemaType, "about">) => {
     setStatus("loading")

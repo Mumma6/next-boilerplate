@@ -15,16 +15,14 @@ handler.post(async (req, res) => {
   try {
     const user = await findUserById(db, req.body.userId)
     if (!user) {
-      handleAPIResponse(res, null, "No user found. Please try again.", 404)
-      return
+      return handleAPIResponse(res, null, "No user found. Please try again.", 404)
     }
+
     const token = await createToken(db, {
       creatorId: user._id,
       type: "emailVerify",
       expireAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
     })
-
-    console.log(user)
 
     await sendMail({
       to: user.email,
