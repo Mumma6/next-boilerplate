@@ -28,7 +28,11 @@ const Landing = () => {
                 Ready to start your next project? Clone the repo or watch the tutorial to begin.
               </Typography>
               <Box>
-                <Link style={{ textDecoration: "none", margin: 5 }} href="/sign-up" passHref>
+                <Link
+                  style={{ textDecoration: "none", margin: 5 }}
+                  href="/https://github.com/Mumma6/next-boilerplate"
+                  passHref
+                >
                   <Button
                     sx={{
                       fontSize: 30,
