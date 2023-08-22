@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Fullstack Boilerplate
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Welcome to the Next.js Auth Boilerplate project, a foundational setup aimed at accelerating your web development process. This boilerplate integrates a range of technologies, providing a streamlined start to building modern web applications.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Live demo: [https://next-boilerplate-umber.vercel.app/](https://next-boilerplate-umber.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This app features a full Auth system and a dashboard.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+For more detailed information, including authentication flows, email system configuration, and more, refer to the [full post on dev.to](LINK_TO_DEVTO_POST)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Technology Overview
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Here's a brief look at some key technologies used in this project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 🌐 **Next.js:** The foundational framework for building the React application.
+- 💅 **Emotion and Material-UI:** These libraries are used to style the components, ensuring responsive and aesthetically pleasing design.
+- 🔐 **Passport:** Manages user authentication with various strategies, including local.
+- 📝 **Formik & Zod:** Handle and validate forms, making sure the data is correct.
+- 📊 **SWR & Axios:** Deal with data fetching and state management.
+- 🔒 **bcryptjs:** Secures user passwords by hashing them.
+- 📧 **nodemailer:** Sends emails for things like verification and password resets.
+- 🗄️ **MongoDB:** The chosen database for this project, utilized for storing user information and managing sessions.
+- 📚 **TypeScript:** Adds static typing to JavaScript, enhancing code quality.
+- 🧪 **Cypress:** Provides end-to-end testing capabilities, ensuring that the application works as intended.
+- 🚀 **Vercel:** The platform for hosting the application, providing a seamless deployment process.
 
-## Learn More
+## Architecture and Code Structure
 
-To learn more about Next.js, take a look at the following resources:
+The architecture of the Next.js Auth Boilerplate project is designed to be modular and scalable, following industry best practices. Here's an overview:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Frontend (Client-side):** Built with Next.js, the frontend uses React components for UI, styled with Emotion and Material-UI, and handles forms via Formik and Zod.
+- **Backend (Server-side):** Utilizes a combination of Next.js API routes, Passport for authentication, and MongoDB for data storage. Axios and SWR assist in data fetching and state management.
+- **Testing:** Cypress is integrated into the workflow to facilitate end-to-end testing.
+- **Deployment:** Vercel is the preferred choice for hosting, providing a smooth deployment process.

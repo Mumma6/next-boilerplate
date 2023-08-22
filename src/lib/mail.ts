@@ -5,7 +5,7 @@ const config = {
   host: "smtp-relay.brevo.com",
   port: 587,
   auth: {
-    user: "moarte6@gmail.com",
+    user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASSWORD,
   },
 }
@@ -27,5 +27,5 @@ export async function sendMail({ from, to, subject, html }: MailOptions) {
 }
 
 export const CONFIG = {
-  from: "moarte6@gmail.com",
+  from: process.env.MAIL_USER,
 }
