@@ -28,17 +28,17 @@ const ForgotPassword = () => {
       setStatus("error")
       toast.error(response.error)
       setEmail("")
+    } else {
+      setStatus("success")
+      setEmail("")
+      activateTimer()
+      toast.success(
+        `An email has been sent to ${email}. Please follow the link to reset your password. Redirecting to login page`,
+        {
+          autoClose: 4000,
+        }
+      )
     }
-
-    setStatus("success")
-    setEmail("")
-    activateTimer()
-    toast.success(
-      `An email has been sent to ${email}. Please follow the link to reset your password. Redirecting to login page`,
-      {
-        autoClose: 4000,
-      }
-    )
   }
 
   return (

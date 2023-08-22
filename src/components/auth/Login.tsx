@@ -45,10 +45,10 @@ const Login = () => {
       toast.error(responseData.error)
       setStatus("error")
       formik.resetForm()
+    } else {
+      mutate({ payload: responseData.payload }, false)
+      setStatus("success")
     }
-
-    mutate({ payload: responseData.payload }, false)
-    setStatus("success")
   }
 
   const formik = useFormik({

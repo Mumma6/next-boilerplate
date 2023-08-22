@@ -37,13 +37,13 @@ const DeleteAccount = () => {
       setIsLoading(false)
       handleClose()
       toast.error(response.error)
+    } else {
+      setIsLoading(false)
+      handleClose()
+      mutate({ payload: null })
+      toast.success(response.message)
+      router.replace("/")
     }
-
-    setIsLoading(false)
-    handleClose()
-    mutate({ payload: null })
-    toast.success(response.message)
-    router.replace("/")
   }
 
   return (

@@ -45,12 +45,12 @@ const Register = () => {
       toast.error(responseData.error)
       setStatus("error")
       formik.resetForm()
+    } else {
+      mutate({ payload: responseData.payload }, false)
+      toast.success("Your account has been created")
+      setStatus("success")
+      router.replace("/home")
     }
-
-    mutate({ payload: responseData.payload }, false)
-    toast.success("Your account has been created")
-    setStatus("success")
-    router.replace("/home")
   }
 
   const formik = useFormik({

@@ -33,14 +33,14 @@ const ForgotPasswordToken = ({ valid, token, user }: { valid: boolean; token: an
       setStatus("error")
       toast.error(response.error)
       setNewPassword("")
+    } else {
+      setStatus("success")
+      setNewPassword("")
+      activateTimer()
+      toast.success("Your password has been updated successfully. Redirecting to login page", {
+        autoClose: 4000,
+      })
     }
-
-    setStatus("success")
-    setNewPassword("")
-    activateTimer()
-    toast.success("Your password has been updated successfully. Redirecting to login page", {
-      autoClose: 4000,
-    })
   }
 
   return (

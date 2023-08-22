@@ -32,11 +32,11 @@ const AboutMe = () => {
       toast.error(responseData.error)
       setStatus("error")
       formik.resetForm()
+    } else {
+      mutate({ payload: responseData.payload }, false)
+      toast.success("Profile updated")
+      setStatus("success")
     }
-
-    mutate({ payload: responseData.payload }, false)
-    toast.success("Profile updated")
-    setStatus("success")
   }
 
   const formik = useFormik({

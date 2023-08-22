@@ -21,12 +21,12 @@ const EmailVerify = ({ user }: { user: Omit<UserModelSchemaType, "password"> }) 
     if (response.error) {
       setStatus("error")
       toast.error(response.error)
+    } else {
+      setStatus("success")
+      toast.info("An email has been sent to your mailbox. Follow the instruction to verify your email.", {
+        autoClose: 4000,
+      })
     }
-
-    setStatus("success")
-    toast.info("An email has been sent to your mailbox. Follow the instruction to verify your email.", {
-      autoClose: 4000,
-    })
   }
 
   if (user.emailVerified) {
