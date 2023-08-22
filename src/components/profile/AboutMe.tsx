@@ -14,7 +14,7 @@ const initialValues = {
   about: "",
 }
 
-const About = () => {
+const AboutMe = () => {
   const [status, setStatus] = useState<Status>("idle")
 
   const { data, mutate } = useUser()
@@ -104,4 +104,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutMe

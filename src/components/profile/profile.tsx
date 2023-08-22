@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Container } from "@mui/material"
-import About from "./About"
+import AboutMe from "./AboutMe"
 
 const Profile = () => {
   return (
@@ -14,7 +14,7 @@ const Profile = () => {
         }}
       >
         <Container maxWidth={false}>
-          <About />
+          <AboutMe />
         </Container>
       </Box>
     </>
