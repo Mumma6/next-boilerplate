@@ -11,6 +11,7 @@
     "cypress-run-automated-tests": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\""
   },
   "dependencies": {
+    "@cypress/react18": "^2.0.0",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
