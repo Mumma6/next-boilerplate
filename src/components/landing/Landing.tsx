@@ -30,7 +30,7 @@ const Landing = () => {
               <Box>
                 <Link
                   style={{ textDecoration: "none", margin: 5 }}
-                  href="/https://github.com/Mumma6/next-boilerplate"
+                  href="https://github.com/Mumma6/next-boilerplate"
                   passHref
                 >
                   <Button
@@ -44,7 +44,11 @@ const Landing = () => {
                     Github Repo
                   </Button>
                 </Link>
-                <Link style={{ textDecoration: "none", margin: 5 }} href="/sign-up" passHref>
+                <Link
+                  style={{ textDecoration: "none", margin: 5 }}
+                  href="https://dev.to/martinpersson/nextjs-auth-and-dashboard-boilerplate-building-a-full-stack-web-app-59g"
+                  passHref
+                >
                   <Button
                     sx={{
                       fontSize: 30,
