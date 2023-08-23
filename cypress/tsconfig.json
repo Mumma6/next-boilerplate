@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "http://localhost:3000",
+    "moduleResolution": "nodenext",
+    "target": "es5",
+    "module": "ES2015",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"]
+  },
+  "include": ["**/*.ts", "cypress.d.ts"]
+}

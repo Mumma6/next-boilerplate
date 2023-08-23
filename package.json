@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "cypress": "cypress open",
-    "dev-server-and-cypress": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
-    "cypress-run-automated-tests": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\""
+    "cypress-e2e": "cypress run --e2e"
   },
   "dependencies": {
     "@cypress/react18": "^2.0.0",
+    "@cypress/webpack-dev-server": "^3.5.2",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
