@@ -21,6 +21,7 @@ Here's a brief look at some key technologies used in this project:
 - 📊 **SWR & Axios:** Deal with data fetching and state management.
 - 🔒 **bcryptjs:** Secures user passwords by hashing them.
 - 📧 **nodemailer:** Sends emails for things like verification and password resets.
+- ⚙️ **next-connect:** A small Express/Connect-style middleware framework for Next.js, facilitating efficient handling of server-side routes and middleware.
 - 🗄️ **MongoDB:** The chosen database for this project, utilized for storing user information and managing sessions.
 - 📚 **TypeScript:** Adds static typing to JavaScript, enhancing code quality.
 - 🧪 **Cypress:** Provides end-to-end testing capabilities, ensuring that the application works as intended.
